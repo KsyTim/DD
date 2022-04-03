@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+}
+
+.wrapper {
+  max-width: 79.2vw;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@mixin border($elem, $type, $color, $size: 1px) {
+  #{$elem}: #{$size} #{$type} #{$color};
+  outline: none;
+}
+
+@import "./colors.scss";
+@import "./sections/header.scss";
+@import "./sections/main-sections.scss";
+@import "./sections/footer.scss";
