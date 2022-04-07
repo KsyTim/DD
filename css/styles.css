@@ -343,9 +343,14 @@ template {
   font-weight: 400;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .wrapper {
   max-width: 79.2vw;
-  margin: 0 auto;
 }
 
 a {
@@ -617,10 +622,12 @@ a {
 
 .footer {
   padding: 24px 0 30px 2px;
+  align-self: stretch;
 }
 .footer .wrapper {
   display: flex;
   justify-content: space-between;
+  margin: 0 auto;
 }
 .footer-privacy {
   font-size: 12px;
