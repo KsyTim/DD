@@ -2,27 +2,21 @@
   padding: 46px 0 0;
 
   .wrapper {
-    display: flex;
-    justify-content: space-between;
+    @include flex-elems(flex, space-between);
     padding: 0 0 14px;
     @include border(border-bottom, solid, $smokie, 2px);
   }
 }
 
 .header {
-  display: flex;
+  @include flex-elems(flex, null, center);
   flex-direction: column;
-  align-items: center;
-  flex: 0 0 12.9%;
+  max-width: 12.9%;
 
   &-links {
     width: 100%;
-
     &-container {
-      margin: 6px 0 36px 3px;
-      padding: 0;
-      list-style: none;
-
+      @include list-reset(0, 6px 0 36px 3px);
       li:not(:last-child) {
         margin-bottom: 36px;
       }
@@ -30,8 +24,7 @@
 
     &-item {
       margin: 0;
-      display: flex;
-      align-items: center;
+      @include flex-elems(flex, null, center);
     }
 
     &-img {
@@ -39,10 +32,7 @@
     }
 
     &-text {
-      font-style: italic;
-      font-size: 14px;
-      line-height: 14px;
-      color: $color-primary;
+      @include text(14px, 14px, italic, $color-primary, null, null);
     }
   }
 
@@ -54,34 +44,24 @@
     &-title {
       text-transform: uppercase;
       font-family: Verdana, Geneva, Tahoma, sans-serif;
-      font-size: 12px;
-      line-height: 12px;
+      @include text(12px, 12px, null, null, null, 0 0 9px);
       padding-bottom: 3px;
       @include border(border-bottom, dashed, $smokie);
-      margin: 0 0 9px;
     }
 
     &-btn {
-      display: flex;
-      align-items: center;
+      @include flex-elems(flex, null, center);
       @include border(border, solid, $smokie);
       padding: 6px 12px 6px 6px;
       border-radius: 5px;
 
       &_text {
-        font-style: italic;
-        font-size: 10px;
-        line-height: 12px;
-        color: $color-primary;
-        margin-left: 6px;
+        @include text(10px, 12px, italic, $color-primary, null, 0 0 0 6px);
       }
     }
 
     &-desc {
-      margin: 11px 0 13px;
-      font-style: italic;
-      font-size: 10px;
-      line-height: 19px;
+      @include text(10px, 19px, italic, null, null, 11px 0 13px);
     }
   }
 }

@@ -1,9 +1,6 @@
 .tabs {
   &-content {
-    font-style: italic;
-    font-size: 22px;
-    line-height: 22px;
-    color: $color-dark;
+    @include text(22px, 22px, italic, $color-dark, null, null);
 
     &-item {
       display: none;
@@ -21,9 +18,8 @@
       }
 
       &__active {
-        display: flex;
+        @include flex-elems(flex, flex-end);
         flex-direction: column;
-        justify-content: flex-end;
         padding-bottom: 4.27rem;
       }
     }
@@ -37,18 +33,15 @@
     }
 
     &-desc {
-      font-size: 14px;
-      line-height: 14px;
+      @include text(14px, 14px, null, $color-white, null, null);
       max-width: 54.4%;
       padding: 14px 24px;
-      color: $color-white;
       background-color: $color-dark;
     }
   }
 
   &-pagination {
-    display: flex;
-    align-items: center;
+    @include flex-elems(flex, null, center);
     &-item {
       flex-grow: 1;
       flex-basis: 25%;
@@ -67,16 +60,10 @@
   }
 
   &-name {
-    font-style: normal;
-    font-size: 18px;
-    line-height: 18px;
-    color: $color-primary;
-    margin: 0 0 -0.15rem;
+    @include text(18px, 18px, normal, $color-primary, null, 0 0 -0.15rem);
   }
 
   &-info {
-    font-size: 10px;
-    line-height: 19px;
-    color: $color-primary;
+    @include text(10px, 19px, null, $color-primary, null, null);
   }
 }

@@ -1,51 +1,39 @@
 .subscribe {
-  display: flex;
-  justify-content: space-between;
+  @include flex-elems(flex, space-between);
   padding: 9px 19px 8px;
   margin: 30px 0 29px;
   @include border(border-top, dashed, $smokie);
   @include border(border-bottom, dashed, $smokie);
   &-item {
     max-width: 65%;
-    display: flex;
-    align-items: center;
+    @include flex-elems(flex, null, center);
   }
 
   &-text {
-    font-style: italic;
-    font-size: 14px;
-    line-height: 16px;
-    margin: 0 0 0 16px;
+    @include text(14px, 16px, italic, null, null, 0 0 0 16px);
   }
 
   &-form {
-    display: flex;
-    align-items: center;
+    @include flex-elems(flex, null, center);
     &-input {
       width: 160px;
       min-height: 22px;
       padding: 0 6px;
-      font-size: 10px;
-      line-height: 10px;
+      @include text(10px, 10px, null, null, null, null);
       @include border(border, solid, $smokie);
       &::placeholder {
-        font-size: 10px;
-        line-height: 10px;
-        color: $smokie;
+        @include text(10px, 10px, null, $smokie, null, null);
       }
     }
     &-btn {
       max-width: 80px;
       min-height: 23px;
       padding: 6px 18px;
-      font-size: 10px;
-      line-height: 9px;
+      @include text(10px, 9px, null, $color-dark, null, 0 0 0 18px);
       text-transform: capitalize;
-      color: $color-dark;
       background: linear-gradient(180deg, $linear-top 0%, $linear-bottom 100%);
       @include border(border, solid, $smokie);
       border-radius: 2px;
-      margin-left: 18px;
     }
   }
 }

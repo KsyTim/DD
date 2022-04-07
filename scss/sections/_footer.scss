@@ -1,31 +1,24 @@
 .footer {
   &.wrapper {
-    display: flex;
-    justify-content: space-between;
+    @include flex-elems(flex, space-between);
     padding: 24px 0 30px 2px;
   }
   
   &-privacy {
-    font-size: 12px;
-    line-height: 12px;
-    letter-spacing: -0.02em;
+    @include text(12px, 12px, null, null, -0.02em, null);
     &-docs {
-      margin: 0;
-      padding: 0;
-      list-style: none;
       display: flex;
+      @include list-reset(0, 0);
       color: $color-primary;
       &__item {
         &:first-child {
           padding-right: 4px;
         }
-      
         &:nth-child(2) {
           padding: 0 4px;
           @include border(border-right, solid, $smokie);
           @include border(border-left, solid, $smokie);
         }
-      
         &:last-child {
           padding-left: 4px;
         }
@@ -37,12 +30,9 @@
     }
   }
   &-socials {
-    display: flex;
-    align-items: center;
+    @include flex-elems(flex, null, center);
     max-width: 10.5%;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    @include list-reset(0, 0);
     &-item {
       &:not(:last-child) {
         margin-right: 12px;
