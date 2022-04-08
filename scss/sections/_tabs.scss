@@ -64,6 +64,6 @@
   }
 
   &-info {
-    @include text(10px, 19px, null, $color-primary, null, null);
+    @include text(10px, 19px, italic, $color-primary, null, null);
   }
 }
