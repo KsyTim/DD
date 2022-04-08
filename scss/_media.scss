@@ -306,6 +306,12 @@
     &-pagination {
       display: none;
     }
+    &-dots {
+      @include flex-elems(flex, center, center);
+    }
+    &-arrows {
+      @include flex-elems(flex, center);
+    }
   }
   .subscribe {
     flex-direction: column;
@@ -465,6 +471,20 @@
         font-size: 14px;
         padding: 10px 6px;
         min-height: 38px;
+      }
+    }
+    &-dots {
+      bottom: -1rem;
+      padding: 1rem 0 0;
+    }
+    &-arrows {
+      &-item {
+        &__left {
+          left: 1.5rem;
+        } 
+        &__right {
+          right: 1.5rem;
+        }
       }
     }
   }

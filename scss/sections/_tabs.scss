@@ -1,5 +1,6 @@
 .tabs {
   &-content {
+    position: relative;
     @include text(22px, 22px, italic, $color-dark, null, null);
 
     &-item {
@@ -65,5 +66,49 @@
 
   &-info {
     @include text(10px, 19px, italic, $color-primary, null, null);
+  }
+  &-dots {
+    position: absolute;
+    bottom: -1.6rem;
+    right: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 20px;
+    @include list-reset(0, 0);
+    display: none;
+    &-item {
+      @include img-size(15px, 15px);
+      background: $color-primary;
+      margin-right: 10px;
+      @include border(border, solid, $color-dark, 2px);
+      &__active {
+        @include border(border, solid, $color-primary, 3px);
+        background-color: $color-dark;
+      }
+    }
+  }
+  &-arrows {
+    display: none;
+    &-item {
+      position: absolute;
+      @include img-size(2rem, 2rem);
+      @include border(border-radius, null, null, 50%);
+      border: none;
+      top: 50%;
+      transform: translate(50%, -50%);
+      background: url("../../images/arrow.svg") no-repeat center;
+      background-size: auto;
+      background-size: contain;
+      cursor: pointer;
+      transition: all 0.3s;
+      &__left {
+        left: 0.5rem;
+        transform: translate(-50%, -50%) rotate(180deg);
+      }
+      &__right {
+        right: 0.5rem;
+      }
+    }
   }
 }

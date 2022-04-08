@@ -445,6 +445,7 @@ a {
 }
 
 .tabs-content {
+  position: relative;
   font-size: 22px;
   line-height: 22px;
   color: #000;
@@ -517,6 +518,57 @@ a {
   line-height: 19px;
   color: #34aca7;
   font-style: italic;
+}
+.tabs-dots {
+  position: absolute;
+  bottom: -1.6rem;
+  right: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: none;
+}
+.tabs-dots-item {
+  width: 15px;
+  height: 15px;
+  background: #34aca7;
+  margin-right: 10px;
+  border: 2px solid #000;
+  outline: none;
+}
+.tabs-dots-item__active {
+  border: 3px solid #34aca7;
+  outline: none;
+  background-color: #000;
+}
+.tabs-arrows {
+  display: none;
+}
+.tabs-arrows-item {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  outline: none;
+  border: none;
+  top: 50%;
+  transform: translate(50%, -50%);
+  background: url("../../images/arrow.svg") no-repeat center;
+  background-size: auto;
+  background-size: contain;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.tabs-arrows-item__left {
+  left: 0.5rem;
+  transform: translate(-50%, -50%) rotate(180deg);
+}
+.tabs-arrows-item__right {
+  right: 0.5rem;
 }
 
 .subscribe {
@@ -926,6 +978,16 @@ a {
   .tabs-pagination {
     display: none;
   }
+  .tabs-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .tabs-arrows {
+    display: flex;
+    justify-content: center;
+    align-items: unset;
+  }
 
   .subscribe {
     flex-direction: column;
@@ -1052,6 +1114,16 @@ a {
     font-size: 14px;
     padding: 10px 6px;
     min-height: 38px;
+  }
+  .tabs-dots {
+    bottom: -1rem;
+    padding: 1rem 0 0;
+  }
+  .tabs-arrows-item__left {
+    left: 1.5rem;
+  }
+  .tabs-arrows-item__right {
+    right: 1.5rem;
   }
 
   .subscribe {
